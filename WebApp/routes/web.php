@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route for Brand
+Route::get('/brand', [BrandController::class, 'index']);
+Route::get('/brand/add', [BrandController::class, 'add']);
+Route::post('/brand/add', [BrandController::class, 'add']);
+Route::get('brand/details/{id}', [BrandController::class, 'details']);
+Route::get('/brand/delete/{id}', [BrandController::class, 'delete']);
