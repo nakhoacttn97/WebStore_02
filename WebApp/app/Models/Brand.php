@@ -12,6 +12,9 @@ class Brand extends Model
     protected $table = 'brand';
     protected $fillable = ['id', 'name'];
 
+    static function edit(int $id, $arr){
+        return self::where('id', $id)->update($arr);
+    }
     static function remove(int $id){
         return self::where('id', $id)->delete($id);
     }

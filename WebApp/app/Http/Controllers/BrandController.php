@@ -39,4 +39,17 @@ class BrandController extends Controller
         }
         return redirect('/brand/error');
     }
+
+    function edit(int $id, Request $rq){
+        $msg = '';
+        if($rq->isMethod('post')){
+            $data = $rq->validate(['name' => 'required']);
+            if(Brand::edit($id, $data)){
+                return redirect('/brand');
+            }else{
+                $msg = 'Edit Failed !';
+            }
+        }
+        return view('brand.edit', ['v' => Brand::findOrFail($id), 'msg' => $msg]);
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,8 @@ Route::get('/brand/add', [BrandController::class, 'add']);
 Route::post('/brand/add', [BrandController::class, 'add']);
 Route::get('brand/details/{id}', [BrandController::class, 'details']);
 Route::get('/brand/delete/{id}', [BrandController::class, 'delete']);
+Route::get('/brand/edit/{id}', [BrandController::class, 'edit']);
+Route::post('/brand/edit/{id}', [BrandController::class, 'edit']);
+
+// Route for Categories
+Route::get('/category', [CategoryController::class, 'index']);
