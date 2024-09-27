@@ -30,3 +30,4 @@ Route::post('/brand/edit/{id}', [BrandController::class, 'edit']);
 
 // Route for Categories
 Route::get('/category', [CategoryController::class, 'index']);
+Route::get('/category/add', [CategoryController::class, 'add']);
