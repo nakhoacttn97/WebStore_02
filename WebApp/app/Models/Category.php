@@ -7,9 +7,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+<<<<<<< HEAD
     public $timestamps = FALSE;
     use HasFactory;
     // default categories
     protected $table = 'category';
     protected $fillable = ['category_id', 'category_name'];
+=======
+    use HasFactory;
+    public $timestamps = FALSE;
+    // default categories
+    protected $table = 'category';
+    protected $fillable = ['category_id', 'category_name'];
+    static function edit(int $id, $arr){
+        return self::where('category_id', $id)->update($arr);
+    }
+    static function find(int $id){
+        return self::where('category_id', $id)->first();
+    }
+    static function remove(int $id){
+        return self::where('category_id', $id)->delete($id);
+    }
+>>>>>>> ec25080 (backup for wls)
 }

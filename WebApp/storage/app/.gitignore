@@ -1,3 +1,7 @@
 *
+<<<<<<< HEAD
+=======
+!private/
+>>>>>>> ec25080 (backup for wls)
 !public/
 !.gitignore

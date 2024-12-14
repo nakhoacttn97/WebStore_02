@@ -2,6 +2,11 @@
 
 namespace App\Providers;
 
+<<<<<<< HEAD
+=======
+use Illuminate\Pagination\Paginator;
+
+>>>>>>> ec25080 (backup for wls)
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+<<<<<<< HEAD
         //
+=======
+        Paginator::useBootstrap();
+>>>>>>> ec25080 (backup for wls)
     }
 }
